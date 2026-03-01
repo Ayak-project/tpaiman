@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 
-const API_URL = 'http://localhost:8000';
+const API_URL = 'https://cloud-backend-80wx.onrender.com';
 
 function App() {
   const [activeTab, setActiveTab] = useState('signup');
