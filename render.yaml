@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: cloud-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python backend/server.py
+    repo: https://github.com/Ayak-project/tpaiman
+    branch: main
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
